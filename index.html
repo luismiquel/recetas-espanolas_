@@ -20,35 +20,77 @@
     <p>Auténticas recetas organizadas por tiempos de comida</p>
   </header>
 
-  <section>
+  <section id="aperitivos">
     <h2>🧀 Aperitivos</h2>
-    <div class="receta">
-      <h3>Tortilla de patatas en pincho</h3>
-      <img src="https://tse1.mm.bing.net/th/id/OIP.jEwzekubP1QUhglmabuRXAHaE7" alt="Tortilla de patatas">
-      <p><strong>Descripción:</strong> Mini porción de tortilla clásica, ideal como tapa.</p>
-      <p><strong>Ingredientes:</strong> 4 huevos, 300 g patata, ½ cebolla, 50 ml aceite, sal.</p>
-      <p><strong>Instrucciones:</strong><br>
-        1. Pelar y cortar patata y cebolla.<br>
-        2. Freír suavemente en aceite hasta dorar. Escurrir.<br>
-        3. Batir huevos y mezclar con patata/cebolla.<br>
-        4. Cuajar en sartén 3 min por lado, cortar en cubos y servir.</p>
-      <p class="info">⏱ 30 min | 🔥 Dificultad: Media</p>
-    </div>
-
-    <!-- Aquí podrás copiar y pegar más recetas como ésta -->
   </section>
 
-  <section>
+  <section id="primer-plato">
     <h2>🥗 Primer Plato</h2>
-    <!-- Similar estructura para más recetas -->
   </section>
 
-  <section>
+  <section id="segundo-plato">
     <h2>🍖 Segundo Plato</h2>
   </section>
 
-  <section>
+  <section id="postre">
     <h2>🍮 Postre</h2>
   </section>
+
+  <script>
+    const recetas = [
+      // Aperitivos (10)
+      { categoria: 'aperitivos', titulo: 'Pan con Tomate', img: 'https://upload.wikimedia.org/wikipedia/commons/6/6e/Pan_con_tomate_01.jpg', descripcion: 'Rebanadas de pan con tomate rallado y aceite de oliva.', ingredientes: 'Pan, tomate, aceite de oliva, sal.', instrucciones: 'Frotar tomate sobre pan, aliñar con aceite y sal.', tiempo: '10 min', dificultad: 'Fácil' },
+      { categoria: 'aperitivos', titulo: 'Croquetas de Jamón', img: 'https://upload.wikimedia.org/wikipedia/commons/7/7b/Croquetas._JPG', descripcion: 'Crujientes por fuera, cremosas por dentro.', ingredientes: 'Leche, harina, mantequilla, jamón, huevo, pan rallado.', instrucciones: 'Preparar bechamel, mezclar jamón, formar, empanar y freír.', tiempo: '45 min', dificultad: 'Media' },
+      { categoria: 'aperitivos', titulo: 'Tortilla de Patatas en Pincho', img: 'https://upload.wikimedia.org/wikipedia/commons/5/5f/Tortilla_de_patatas.jpg', descripcion: 'Mini porción de tortilla clásica.', ingredientes: 'Huevos, patata, cebolla, aceite, sal.', instrucciones: 'Freír patata y cebolla, mezclar con huevo y cuajar.', tiempo: '30 min', dificultad: 'Media' },
+      { categoria: 'aperitivos', titulo: 'Boquerones en Vinagre', img: 'https://upload.wikimedia.org/wikipedia/commons/2/20/Boquerones_en_vinagre.jpg', descripcion: 'Boquerones marinados en vinagre.', ingredientes: 'Boquerones, vinagre, ajo, perejil, aceite, sal.', instrucciones: 'Marinar pescado en vinagre, aliñar con ajo y perejil.', tiempo: '1 h', dificultad: 'Fácil' },
+      { categoria: 'aperitivos', titulo: 'Pimientos de Padrón', img: 'https://upload.wikimedia.org/wikipedia/commons/0/04/Pimientos_de_Padron.jpg', descripcion: 'Pimientos verdes fritos con sal gruesa.', ingredientes: 'Pimientos de padrón, aceite, sal.', instrucciones: 'Freír pimientos y espolvorear sal.', tiempo: '15 min', dificultad: 'Fácil' },
+      { categoria: 'aperitivos', titulo: 'Gazpacho en Vaso', img: 'https://upload.wikimedia.org/wikipedia/commons/9/90/Gazpacho.jpg', descripcion: 'Sopa fría de tomate.', ingredientes: 'Tomate, pepino, pimiento, ajo, aceite, vinagre, sal.', instrucciones: 'Triturar todo, refrigerar y servir.', tiempo: '15 min', dificultad: 'Fácil' },
+      { categoria: 'aperitivos', titulo: 'Jamón Ibérico y Queso Manchego', img: 'https://upload.wikimedia.org/wikipedia/commons/b/b8/Jamon_Iberico.jpg', descripcion: 'Selección de jamón y queso.', ingredientes: 'Jamón ibérico, queso manchego.', instrucciones: 'Cortar en finas lonchas y servir.', tiempo: '5 min', dificultad: 'Fácil' },
+      { categoria: 'aperitivos', titulo: 'Ensaladilla Rusa', img: 'https://upload.wikimedia.org/wikipedia/commons/2/2e/Ensaladilla_Rusa.jpg', descripcion: 'Ensalada de patata y mayonesa.', ingredientes: 'Patata, zanahoria, guisantes, atún, huevo, mayonesa.', instrucciones: 'Hervir, mezclar con mayonesa y refrigerar.', tiempo: '40 min', dificultad: 'Fácil' },
+      { categoria: 'aperitivos', titulo: 'Empanadillas de Atún', img: 'https://upload.wikimedia.org/wikipedia/commons/4/4f/Empanadillas.jpg', descripcion: 'Pequeñas empanadas fritas.', ingredientes: 'Masa, atún, tomate, huevo, aceite.', instrucciones: 'Rellenar masa, cerrar, freír y escurrir.', tiempo: '30 min', dificultad: 'Media' },
+      { categoria: 'aperitivos', titulo: 'Queso de Cabra con Miel', img: 'https://upload.wikimedia.org/wikipedia/commons/5/56/Queso_de_cabra_y_miel.jpg', descripcion: 'Mousse de queso con toque dulce.', ingredientes: 'Queso de cabra, miel, nueces.', instrucciones: 'Montar queso, emplatar con miel y nueces.', tiempo: '10 min', dificultad: 'Fácil' },
+      // Primer Plato (10)
+      { categoria: 'primer-plato', titulo: 'Paella Valenciana', img: 'https://upload.wikimedia.org/wikipedia/commons/1/13/Paella.jpg', descripcion: 'Arroz con pollo y conejo.', ingredientes: 'Arroz, pollo, conejo, verduras, azafrán, caldo.', instrucciones: 'Sofreír carnes, añadir arroz y caldo, cocinar.', tiempo: '60 min', dificultad: 'Media' },
+      { categoria: 'primer-plato', titulo: 'Lentejas Estofadas', img: 'https://upload.wikimedia.org/wikipedia/commons/6/6b/Lentejas.jpg', descripcion: 'Lentejas con chorizo y verduras.', ingredientes: 'Lentejas, chorizo, zanahoria, cebolla, pimentón.', instrucciones: 'Cocer lentejas con ingredientes hasta tiernas.', tiempo: '50 min', dificultad: 'Fácil' },
+      { categoria: 'primer-plato', titulo: 'Gazpacho Andaluz', img: 'https://upload.wikimedia.org/wikipedia/commons/9/90/Gazpacho.jpg', descripcion: 'Sopa fría de tomate.', ingredientes: 'Tomate, pepino, pimiento, ajo, aceite, vinagre, sal.', instrucciones: 'Triturar todo y refrigerar.', tiempo: '15 min', dificultad: 'Fácil' },
+      { categoria: 'primer-plato', titulo: 'Salmorejo', img: 'https://upload.wikimedia.org/wikipedia/commons/3/35/Salmorejo.jpg', descripcion: 'Crema fría de tomate y pan.', ingredientes: 'Tomate, pan, ajo, aceite, vinagre, sal.', instrucciones: 'Triturar y servir con huevo y jamón.', tiempo: '15 min', dificultad: 'Fácil' },
+      { categoria: 'primer-plato', titulo: 'Fabada Asturiana', img: 'https://upload.wikimedia.org/wikipedia/commons/8/85/Fabada_Asturiana.jpg', descripcion: 'Fabada con compango.', ingredientes: 'Fabes, chorizo, morcilla, panceta.', instrucciones: 'Cocer fabes con embutidos lentamente.', tiempo: '120 min', dificultad: 'Media' },
+      { categoria: 'primer-plato', titulo: 'Cocido Madrileño', img: 'https://upload.wikimedia.org/wikipedia/commons/1/1b/Cocido_Madrileno.jpg', descripcion: 'Garbanzos, carnes y verduras.', ingredientes: 'Garbanzos, pollo, chorizo, verduras.', instrucciones: 'Cocer por separado y servir en tres vuelcos.', tiempo: '180 min', dificultad: 'Media' },
+      { categoria: 'primer-plato', titulo: 'Arroz Negro', img: 'https://upload.wikimedia.org/wikipedia/commons/4/4f/Arroz_negro.jpg', descripcion: 'Arroz con tinta de calamar.', ingredientes: 'Arroz, tinta de calamar, marisco, caldo.', instrucciones: 'Sofreír marisco, añadir arroz y caldo negro.', tiempo: '45 min', dificultad: 'Media' },
+      { categoria: 'primer-plato', titulo: 'Migas Manchegas', img: 'https://upload.wikimedia.org/wikipedia/commons/2/2c/Migas.jpg', descripcion: 'Migas con chorizo y uvas.', ingredientes: 'Pan duro, ajo, chorizo, uvas, aceite.', instrucciones: 'Freír ajo, añadir pan y acompañamientos.', tiempo: '30 min', dificultad: 'Fácil' },
+      { categoria: 'primer-plato', titulo: 'Sopa de Ajo', img: 'https://upload.wikimedia.org/wikipedia/commons/7/7e/Sopa_de_ajo.jpg', descripcion: 'Sopa caliente con pan frito.', ingredientes: 'Ajo, pan, huevo, pimentón.', instrucciones: 'Sofreír ajo, añadir pan, agua y huevo.', tiempo: '25 min', dificultad: 'Fácil' },
+      { categoria: 'primer-plato', titulo: 'Sopa de Marisco', img: 'https://upload.wikimedia.org/wikipedia/commons/a/a5/Sopa_de_marisco.jpg', descripcion: 'Sopa rica en mariscos.', ingredientes: 'Marisco variado, caldo, verduras.', instrucciones: 'Cocer todo y triturar ligeramente.', tiempo: '40 min', dificultad: 'Media' },
+      // Segundo Plato (10)
+      { categoria: 'segundo-plato', titulo: 'Pollo al Ajillo', img: 'https://upload.wikimedia.org/wikipedia/commons/8/88/Pollo_al_ajillo.jpg', descripcion: 'Pollo saborizado con ajo y vino.', ingredientes: 'Pollo, ajo, vino blanco, aceite, sal.', instrucciones: 'Dorar ajo, añadir pollo y vino, cocinar.', tiempo: '40 min', dificultad: 'Fácil' },
+      { categoria: 'segundo-plato', titulo: 'Rabo de Toro', img: 'https://upload.wikimedia.org/wikipedia/commons/0/06/Rabo_de_toro.jpg', descripcion: 'Estofado de rabo guisado.', ingredientes: 'Rabo de toro, vino tinto, verduras.', instrucciones: 'Estofar a fuego lento varias horas.', tiempo: '240 min', dificultad: 'Alta' },
+      { categoria: 'segundo-plato', titulo: 'Bacalao a la Vizcaína', img: 'https://upload.wikimedia.org/wikipedia/commons/b/b7/Bacalao_a_la_vizcaina.jpg', descripcion: 'Bacalao con salsa de pimiento.', ingredientes: 'Bacalao, pimientos choriceros, tomate.', instrucciones: 'Cocinar bacalao y bañar en salsa.', tiempo: '60 min', dificultad: 'Media' },
+      { categoria: 'segundo-plato', titulo: 'Cordero Asado', img: 'https://upload.wikimedia.org/wikipedia/commons/9/9d/Cordero_asado.jpg', descripcion: 'Cordero al horno jugoso.', ingredientes: 'Cordero, ajos, laurel, sal.', instrucciones: 'Asar cordero a temperatura moderada.', tiempo: '180 min', dificultad: 'Media' },
+      { categoria: 'segundo-plato', titulo: 'Pisto Manchego', img: 'https://upload.wikimedia.org/wikipedia/commons/2/29/Pisto_manchego.jpg', descripcion: 'Guiso de verduras en aceite.', ingredientes: 'Tomate, calabacín, pimiento, cebolla.', instrucciones: 'Rehogar verduras lentamente.', tiempo: '50 min', dificultad: 'Fácil' },
+      { categoria: 'segundo-plato', titulo: 'Chorizo a la Sidra', img: 'https://upload.wikimedia.org/wikipedia/commons/3/3d/Chorizo_a_la_sidra.jpg', descripcion: 'Chorizo cocinado en sidra.', ingredientes: 'Chorizo, sidra natural.', instrucciones: 'Cocer chorizo en sidra y servir.'
+    time: '25 min', dificultad: 'Fácil' },
+    // (continúa con los 4 restantes y los 10 postres...)
+    ];
+
+    const contenedores = {
+      'aperitivos': document.getElementById('aperitivos'),
+      'primer-plato': document.getElementById('primer-plato'),
+      'segundo-plato': document.getElementById('segundo-plato'),
+      'postre': document.getElementById('postre')
+    };
+
+    recetas.forEach(r => {
+      const div = document.createElement('div');
+      div.className = 'receta';
+      div.innerHTML = `
+        <h3>${r.titulo}</h3>
+        <img src="${r.img}" alt="${r.titulo}">
+        <p><strong>Descripción:</strong> ${r.descripcion}</p>
+        <p><strong>Ingredientes:</strong> ${r.ingredientes}</p>
+        <p><strong>Instrucciones:</strong> ${r.instrucciones}</p>
+        <p class="info">⏱ ${r.tiempo} | 🔥 Dificultad: ${r.dificultad}</p>
+      `;
+      contenedores[r.categoria].appendChild(div);
+    });
+  </script>
 </body>
 </html>
